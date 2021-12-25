@@ -12,20 +12,29 @@ class LoogInViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-      
+    
     // MARK: - Public Properties
-    private let user = "User"
-    private let password = "1234"
+    private let user = User.getUser()
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = user
-    }
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
         
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                let userVC = navigationVC.topViewController as! UserViewController
+                userVC.user = user
+            }
+        }
+        
+    }
+    
     // MARK: - IB Actions
     @IBAction func loginButton() {
-        if userNameTextField.text != user || passwordTextField.text != password {
+        if userNameTextField.text != user.login || passwordTextField.text != user.password {
             showAlert(title: "invalid login or password!",
                       massage: "Please, enter correct login and password")
         }
@@ -72,8 +81,7 @@ extension LoogInViewController: UITextFieldDelegate {
             performSegue(withIdentifier: "showWelcomeVC", sender: nil)
         }
         return true
-    }
-    
+    }    
 }
 
 

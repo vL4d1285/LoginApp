@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D048AFD22776587900B8FFF1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D048AFD12776587900B8FFF1 /* User.swift */; };
+		D048AFD72776686100B8FFF1 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D048AFD62776686100B8FFF1 /* UserViewController.swift */; };
+		D048AFD9277678BE00B8FFF1 /* TheBeatlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D048AFD8277678BE00B8FFF1 /* TheBeatlesViewController.swift */; };
 		D05D29A127739AFF003743FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D29A027739AFF003743FD /* AppDelegate.swift */; };
 		D05D29A327739AFF003743FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D29A227739AFF003743FD /* SceneDelegate.swift */; };
 		D05D29A527739AFF003743FD /* LoogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05D29A427739AFF003743FD /* LoogInViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D048AFD12776587900B8FFF1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D048AFD62776686100B8FFF1 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		D048AFD8277678BE00B8FFF1 /* TheBeatlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBeatlesViewController.swift; sourceTree = "<group>"; };
 		D05D299D27739AFF003743FD /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05D29A027739AFF003743FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D05D29A227739AFF003743FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D048AFCD2776556700B8FFF1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D05D29A427739AFF003743FD /* LoogInViewController.swift */,
+				D0826E4A2775071000790603 /* WelcomeViewController.swift */,
+				D048AFD62776686100B8FFF1 /* UserViewController.swift */,
+				D048AFD8277678BE00B8FFF1 /* TheBeatlesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D048AFCE2776558700B8FFF1 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				D05D29A027739AFF003743FD /* AppDelegate.swift */,
+				D05D29A227739AFF003743FD /* SceneDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		D048AFCF277655AB00B8FFF1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D05D29A627739AFF003743FD /* Main.storyboard */,
+				D05D29AB27739AFF003743FD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D048AFD0277655FA00B8FFF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D05D29A927739AFF003743FD /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D048AFD32776588300B8FFF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D048AFD12776587900B8FFF1 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D05D299427739AFF003743FD = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +109,11 @@
 		D05D299F27739AFF003743FD /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				D05D29A027739AFF003743FD /* AppDelegate.swift */,
-				D05D29A227739AFF003743FD /* SceneDelegate.swift */,
-				D05D29A427739AFF003743FD /* LoogInViewController.swift */,
-				D0826E4A2775071000790603 /* WelcomeViewController.swift */,
-				D05D29A627739AFF003743FD /* Main.storyboard */,
-				D05D29A927739AFF003743FD /* Assets.xcassets */,
-				D05D29AB27739AFF003743FD /* LaunchScreen.storyboard */,
+				D048AFCD2776556700B8FFF1 /* ViewControllers */,
+				D048AFD32776588300B8FFF1 /* Models */,
+				D048AFCE2776558700B8FFF1 /* Supports */,
+				D048AFCF277655AB00B8FFF1 /* Storyboards */,
+				D048AFD0277655FA00B8FFF1 /* Resources */,
 				D05D29AE27739AFF003743FD /* Info.plist */,
 			);
 			path = LoginApp;
@@ -142,9 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D05D29A527739AFF003743FD /* LoogInViewController.swift in Sources */,
+				D048AFD72776686100B8FFF1 /* UserViewController.swift in Sources */,
 				D0826E4B2775071000790603 /* WelcomeViewController.swift in Sources */,
 				D05D29A127739AFF003743FD /* AppDelegate.swift in Sources */,
+				D048AFD22776587900B8FFF1 /* User.swift in Sources */,
 				D05D29A327739AFF003743FD /* SceneDelegate.swift in Sources */,
+				D048AFD9277678BE00B8FFF1 /* TheBeatlesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
